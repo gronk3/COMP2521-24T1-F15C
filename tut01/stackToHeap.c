@@ -9,16 +9,28 @@ struct node {
 int main(void) {
 
     // Stack
-	struct node n;
+	// struct node n;
 	n.value = 42;
 	n.next = NULL;
+
+
+	// Heap
+	struct node *n = malloc(sizeof(struct node));
+	n->value = 42;
+	n->next = NULL;
 }
 
 
-// int main(void) {
-//     // Stack
-// 	int a[5];
-// 	for (int i = 0; i < 5; i++) {
-// 		a[i] = 42;
-// 	}
-// }
+int main(void) {
+    // Stack
+	int a[5];
+	for (int i = 0; i < 5; i++) {
+		a[i] = 42;
+	}
+
+	// Heap
+	int *a = malloc(sizeof(int) * 5);
+	for (int i = 0; i < 5; i++) {
+		a[i] = 42;
+	}
+}
